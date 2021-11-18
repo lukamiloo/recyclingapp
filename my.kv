@@ -1,0 +1,117 @@
+<MyLayout>:
+    recycleObj : rec
+    FloatLayout:
+        canvas:
+            Color:
+                rgba: 0, 1, 0, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        orientation: 'vertical'
+        Label:
+            size_hint_y: None
+            height : 1.5 * self.texture_size[1]
+            color:0,0,0,1
+            font_size: 25
+            text: 'Welcome!'
+            pos_hint: {"x":0.0009, "top":0.17}
+        Label:
+            size_hint_y: None
+            color:0,0,0,1
+            height : 1.5 * self.texture_size[1]
+            font_size: 20
+            text: 'Swipe Right to Begin!'
+            pos_hint: {"x":0.0009, "top":0.1}
+        Image:
+            source: 'QueensLogo_black.png'
+            size_hint_y: None
+            height: dp(400)
+            pos_hint: {"x":0.0009, "top":1.08}
+        Image:
+            source: 'unnamed.png'
+            size_hint_y: None
+            height: dp(120)
+            pos_hint: {"x":0.0009, "top": 0.46}
+    FloatLayout:
+        canvas:
+            Color:
+                rgba: 1, 0, 0, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        orientation: 'vertical'
+        Label:
+            size_hint_y: None
+            height : 1.5 * self.texture_size[1]
+            color:0,0,0,1
+            font_size: 33
+            text: 'What Bin?'
+            pos_hint: {"x":0.0009, "top":1}
+        Label:
+            size_hint_y: None
+            height : 1.5 * self.texture_size[1]
+            color:0,0,0,1
+            font_size: 25
+            text: 'Discarded Object:'
+            pos_hint: {"x":0.0009, "top":0.8}
+        TextInput:
+            multiline:False
+            size_hint_y: None
+            id:rec
+            color:1,1,1,1
+            pos_hint: {"x":0.0009, "top":0.7}
+        Label:
+            size_hint_y: None
+            height : 1.5 * self.texture_size[1]
+            color:0,0,0,1
+            font_size: 25
+            text: 'Correct Bin:'
+            pos_hint: {"x":0.0009, "top":0.39}
+        Image:
+            id:imageView
+            source: '<random_name>.png'
+            pos_hint: {"x":0.0009, "top": 0.53}
+        Button:
+            text: 'Submit'
+            size_hint_y: None
+            pos_hint: {"x":0.0009, "top": 0.6}
+            on_press: root.search()
+    FloatLayout:
+        canvas:
+            Color:
+                rgba : 1, 1, 0, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        orientation: 'vertical'
+        Label:
+            size_hint_y: None
+            height : 1.5 * self.texture_size[1]
+            color:0,0,0,1
+            font_size: 33
+            text: 'Pickup Dates'
+            pos_hint: {"x":0.0009, "top":1}
+        Image:
+            source: 'week.png'
+            size_hint_y: None
+            height: dp(185)
+            pos_hint: {"x":0.0009, "top":0.78}
+        Image:
+            source: 'regions.png'
+            size_hint_y: None
+            height: dp(180)
+            pos_hint: {"x":0.0009, "top":0.33}
+        Label:
+            size_hint_y: None
+            height : 1.5 * self.texture_size[1]
+            color:0,0,0,1
+            font_size: 18
+            text: 'Garbage Pickup Regions'
+            pos_hint: {"x":0.0009, "top":0.42}
+        Label:
+            size_hint_y: None
+            height : 1.5 * self.texture_size[1]
+            color:0,0,0,1
+            font_size: 18
+            text: 'Pickup Day:'
+            pos_hint: {"x":0.0009, "top":0.83}
